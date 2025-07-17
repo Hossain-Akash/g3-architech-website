@@ -137,6 +137,21 @@ main > section{
     font-size: 1.25rem;
     margin-top: 5px;
 }
+
+/* Sponsor styles */
+.sponsor-title{
+    max-width: 542px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-company img{
+    filter: grayscale(100%);
+}
+
 /* responsive small device media query */
 @media screen and (max-width: 576px) {
     .navbar, 
@@ -144,11 +159,21 @@ main > section{
     .team{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container, 
+    .fact-container,
+    .sponsor-company{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .fact-container{
+        justify-items: center;
+        gap: 24px;
     }
     .feature{
         margin-left: 10px;
+    }
+    .sponsor-company{
+        gap: 50px;
+        justify-items: center;
     }
 }
 
@@ -159,5 +184,11 @@ main > section{
     }
     .feature{
         margin-left: 50px auto;
+    }
+    .fact-container, .sponsor-company{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
     }
 }
